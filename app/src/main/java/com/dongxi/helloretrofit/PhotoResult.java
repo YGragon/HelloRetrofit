@@ -4,7 +4,7 @@ package com.dongxi.helloretrofit;
  * Created by Administrator on 2016/10/12.
  */
 
-public class AndroidResult {
+public class PhotoResult {
 
 
     /**
@@ -103,7 +103,7 @@ public class AndroidResult {
 
     @Override
     public String toString() {
-        return "AndroidResult{" +
+        return "PhotoResult{" +
                 "count=" + count +
                 ", fcount=" + fcount +
                 ", galleryclass=" + galleryclass +

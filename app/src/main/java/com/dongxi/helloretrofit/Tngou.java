@@ -15,7 +15,7 @@ public class Tngou {
     @SerializedName("total")
     private int total;
     @SerializedName("tngou")
-    private List<AndroidResult> list;
+    private List<PhotoResult> list;
 
     public boolean isStatus() {
         return status;
@@ -33,11 +33,11 @@ public class Tngou {
         this.total = total;
     }
 
-    public List<AndroidResult> getList() {
+    public List<PhotoResult> getList() {
         return list;
     }
 
-    public void setList(List<AndroidResult> list) {
+    public void setList(List<PhotoResult> list) {
         this.list = list;
     }
 }

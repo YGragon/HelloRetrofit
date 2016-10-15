@@ -18,20 +18,24 @@ import java.util.List;
 
 public class PhotoAdater extends RecyclerView.Adapter<PhotoAdater.myPhotoView> {
 
-    private List<AndroidResult> photoList = new ArrayList<AndroidResult>();
-    private AndroidResult PhotoInfo;
+    private List<PhotoResult> photoList = new ArrayList<PhotoResult>();
+    private PhotoResult PhotoInfo;
     private ImageView image;
     private Context mContent;
+    private PhotoAdater.myPhotoView myPhotoView;
+    private static final int NORMAL_ITEM = 0;
+    private static final int GROUP_ITEM = 1;
 
-    public PhotoAdater(List<AndroidResult> list, Context context) {
+    public PhotoAdater(List<PhotoResult> list, Context context) {
         this.photoList = list;
         this.mContent = context;
     }
 
     @Override
     public myPhotoView onCreateViewHolder(ViewGroup parent, int viewType) {
-        myPhotoView myPhotoView = new myPhotoView(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_photo, parent, false));
+        myPhotoView = new myPhotoView(LayoutInflater.from(parent.getContext())
+            .inflate(R.layout.item_cardview_layout, parent, false));
+
         return myPhotoView;
     }
 
